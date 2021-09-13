@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane focusTraversable="true" prefHeight="422.0" prefWidth="622.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane fx:id="enquiry_pane" layoutX="10.0" layoutY="48.0" prefHeight="601.0" prefWidth="903.0" style="-fx-background-color: #8F1D21;" />
+      <AnchorPane layoutY="-6.0" prefHeight="54.0" prefWidth="916.0" style="-fx-background-color: #000000;">
+         <children>
+            <Button fx:id="store_btn" onAction="#showPayment" mnemonicParsing="false" prefHeight="54.0" prefWidth="119.0" style="-fx-background-color: #EEECE1;" text="     Cart">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <ImageView fitHeight="38.0" fitWidth="36.0" layoutX="355.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/logo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="38.0" layoutX="545.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@productPics/icons/photo.png" />
+               </image>
+            </ImageView>
+            <MenuButton fx:id="accountBtn" alignment="CENTER" layoutX="806.0" layoutY="11.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="98.0" style="-fx-background-color: #EEECE1;" text="Account" textAlignment="CENTER">
+               <items>
+                  <MenuItem fx:id="do" mnemonicParsing="false" onAction="#switchtod" text="Donator" />
+                  <MenuItem fx:id="re" mnemonicParsing="false" onAction="#switchtor" text="Receiver" />
+                  <MenuItem fx:id="se" mnemonicParsing="false" onAction="#switchtos" text="Seller" />
+               </items>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </MenuButton>
+            <Button fx:id="account_btn1" layoutX="700.0" layoutY="9.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="91.0" style="-fx-background-color: #EEECE1; -fx-border-radius: 0%;" text="Confirm" textFill="#1e1c1c" visible="false">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="47.0" fitWidth="45.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@productPics/icons/Shop-Store-Icon-5.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="423.0" layoutY="5.0" prefHeight="43.0" prefWidth="116.0" text="ESSPRO" textFill="#fce2e2">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+            <Button fx:id="conf" layoutX="734.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleconf" prefHeight="36.0" prefWidth="71.0" style="-fx-background-color: #EEECE1;" text="Confirm" visible="false">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="history_pane" layoutY="45.0" prefHeight="614.0" prefWidth="916.0" style="-fx-background-color: #4ECDC4;">
+         <children>
+            <TableView fx:id="purchaseHistory" layoutX="35.0" layoutY="115.0" prefHeight="364.0" prefWidth="386.0">
+              <columns>
+                <TableColumn fx:id="purchaseIdCol" prefWidth="99.0" text="Purchase ID" />
+                  <TableColumn fx:id="purchaseDayCol" prefWidth="126.0" text="Date" />
+                  <TableColumn fx:id="purchaseAmountCol" prefWidth="159.0" text="Amount" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="store_pane" layoutY="45.0" prefHeight="600.0" prefWidth="913.0" style="-fx-background-color: #F79646;">
+         <children>
+            <Pane layoutY="-1.0" prefHeight="653.0" prefWidth="273.0" style="-fx-background-color: #000000;">
+               <children>
+                 <Button fx:id="addToCart" layoutX="27.0" layoutY="422.0" mnemonicParsing="false" onAction="#handleCart" prefHeight="47.0" prefWidth="224.0" style="-fx-background-color: #F79646;" text="Add To Cart" textFill="#050505">
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Button>
+                  <ImageView fx:id="mainImg" fitHeight="232.0" fitWidth="203.0" layoutX="37.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" styleClass="thumb">
+                     <image>
+                        <Image fx:id="image" url="@productPics/icons/110912-font-awesome.png" />
+                     </image>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </ImageView>
+                  <Label fx:id="tit" layoutX="33.0" layoutY="213.0" text="TITLE" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="tit2" layoutX="31.0" layoutY="263.0" text="DESCRIPTION" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="tit3" layoutX="31.0" layoutY="313.0" text="QUANTITY" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="tit4" layoutX="31.0" layoutY="384.0" text="PRICE" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+            <AnchorPane layoutX="290.0" layoutY="14.0" prefHeight="583.0" prefWidth="603.0">
+               <children>
+                  <Label fx:id="a" layoutX="25.0" text="Sunpure Oil Packet">
+                     <font>
+                        <Font name="Open Sans Semibold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="img1" fitHeight="188.0" fitWidth="160.0" layoutX="1.0" layoutY="21.0" onMouseClicked="#display" pickOnBounds="true" preserveRatio="true" styleClass="thumb">
+                     <image>
+                        <Image url="@Images/Screenshot (1299).png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="2" fitHeight="188.0" fitWidth="160.0" layoutX="429.0" layoutY="21.0" onMouseClicked="#display1" pickOnBounds="true" preserveRatio="true" styleClass="thumb">
+                     <image>
+                        <Image url="@Images/Screenshot (1302).png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="188.0" fitWidth="190.0" layoutX="203.0" layoutY="21.0" onMouseClicked="#display2" pickOnBounds="true" preserveRatio="true" styleClass="thumb">
+                     <image>
+                        <Image url="@Images/class-10th-ncert-books-science-maths-social-science-kratika-original-imafpbyjratx23sc.jpeg" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="188.0" fitWidth="160.0" layoutX="429.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true" styleClass="thumb">
+                     <image>
+                        <Image url="@Images/Screenshot (1285).png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="188.0" fitWidth="160.0" layoutX="5.0" layoutY="423.0" pickOnBounds="true" preserveRatio="true" styleClass="thumb">
+                     <image>
+                        <Image url="@Images/Screenshot (1289).png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="188.0" fitWidth="160.0" layoutX="222.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true" styleClass="thumb">
+                     <image>
+                        <Image url="@Images/Screenshot (1281).png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="160.0" fitWidth="179.0" layoutY="225.0" onMouseClicked="#display6" pickOnBounds="true" preserveRatio="true" styleClass="thumb">
+                     <image>
+                        <Image url="@Images/Screenshot (1286).png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="157.0" fitWidth="179.0" layoutX="437.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true" styleClass="thumb">
+                     <image>
+                        <Image url="@Images/Screenshot (1301).png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label fx:id="j" layoutX="200.0" text="CBSE 10th Class Textbook Set">
+                     <font>
+                        <Font name="Open Sans Semibold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="z" layoutX="464.0" text="Chawanprash">
+                     <font>
+                        <Font name="Open Sans Semibold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="c" layoutX="13.0" layoutY="202.0" text="Papilon Food Colour">
+                     <font>
+                        <Font name="Open Sans Semibold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="208.0" fitWidth="160.0" layoutX="222.0" layoutY="423.0" pickOnBounds="true" preserveRatio="true" styleClass="thumb">
+                     <image>
+                        <Image url="@Images/Screenshot (1288).png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label fx:id="i" layoutX="248.0" layoutY="202.0" text="Millets and Oats">
+                     <font>
+                        <Font name="Open Sans Semibold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="e" layoutX="460.0" layoutY="202.0" text="Coffee Powder">
+                     <font>
+                        <Font name="Open Sans Semibold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="f" layoutX="21.0" layoutY="403.0" text="Ragi Teething Sticks">
+                     <font>
+                        <Font name="Open Sans Semibold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="g" layoutX="253.0" layoutY="403.0" text="Whiskas Cat Food">
+                     <font>
+                        <Font name="Open Sans Semibold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="h" layoutX="461.0" layoutY="403.0" text="Fresh Coconut">
+                     <font>
+                        <Font name="Open Sans Semibold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="678.0" style="-fx-background-color: #F79646;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Button fx:id="paymentCnf" layoutX="83.0" layoutY="353.0" mnemonicParsing="false" onAction="#handleConfirmButton" prefHeight="33.0" prefWidth="123.0" style="-fx-background-color: #7f8c8d;" text="Confirm" textFill="WHITE">
+         <font>
+            <Font name="Open Sans Semibold" size="12.0" />
+         </font></Button>
+      <Label layoutX="61.0" layoutY="14.0" text="CHECKOUT">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Separator layoutX="8.0" layoutY="198.0" prefHeight="5.0" prefWidth="273.0" />
+      <TextField fx:id="cardName" layoutX="58.0" layoutY="215.0" prefHeight="39.0" prefWidth="196.0" promptText="Name on card" />
+      <TextField fx:id="cardNumber" layoutX="58.0" layoutY="268.0" prefHeight="26.0" prefWidth="196.0" promptText="XXXX-XXXX-XXXX-XXXX" />
+      <TextField fx:id="exp" layoutX="58.0" layoutY="307.0" prefHeight="26.0" prefWidth="101.0" promptText="MM/YY" />
+      <TextField fx:id="cvc" layoutX="203.0" layoutY="307.0" prefHeight="26.0" prefWidth="48.0" promptText="CVC" />
+      <Separator layoutX="321.0" layoutY="2.0" orientation="VERTICAL" prefHeight="392.0" prefWidth="3.0" />
+      <Label layoutX="370.0" layoutY="291.0" prefHeight="39.0" prefWidth="108.0" text="SUB TOTAL">
+         <font>
+            <Font name="ATROX normal" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="370.0" layoutY="317.0" prefHeight="39.0" prefWidth="108.0" text="TAXES">
+         <font>
+            <Font name="ATROX normal" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="370.0" layoutY="350.0" prefHeight="39.0" prefWidth="108.0" text="TOTAL">
+         <font>
+            <Font name="ATROX normal" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="493.0" layoutY="291.0" prefHeight="39.0" prefWidth="108.0" text="Rs. 300">
+         <font>
+            <Font name="ATROX normal" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="493.0" layoutY="317.0" prefHeight="39.0" prefWidth="108.0" text="Rs.54">
+         <font>
+            <Font name="ATROX normal" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalLabel" layoutX="493.0" layoutY="352.0" prefHeight="39.0" prefWidth="108.0" text="Rs.354">
+         <font>
+            <Font name="ATROX normal" size="26.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="108.0" fitWidth="123.0" layoutX="591.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@productPics/icons/post-purchase-dribbble-animated-400x300.gif" />
+         </image>
+      </ImageView>
+      <Separator layoutX="340.0" layoutY="351.0" prefHeight="6.0" prefWidth="214.0" />
+      <ImageView fitHeight="130.0" fitWidth="178.0" layoutX="30.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@productPics/card/m.png" />
+         </image></ImageView>
+      <ImageView fitHeight="130.0" fitWidth="178.0" layoutX="162.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@productPics/card/v.png" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="cartText" editable="false" layoutX="357.0" layoutY="25.0" prefHeight="226.0" prefWidth="330.0" style="-fx-background-color: #000000;" text="Item                                            Qty                Price&#10;Sunpure Oil Packet                      1                  Rs.300&#10;Papilon Food Colour                   1                  Rs.0&#10;Chawanprash                              1                  Rs.0" />
+   </children>
+</AnchorPane>
