@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="481.0" prefWidth="774.0" style="-fx-background-color: #C4F1F7;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <children>
+      <Label alignment="CENTER" prefHeight="18.0" prefWidth="830.0" style="-fx-font-family: Times New Roman;" text="Helping Hands" textAlignment="CENTER">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+    <MenuBar prefHeight="35.0" prefWidth="531.0" style="-fx-background-color: #ABCCC9;">
+      <menus>
+        <Menu mnemonicParsing="false" text="Categories">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Food" />
+            <MenuItem mnemonicParsing="false" text="Clothes" />
+            <MenuItem mnemonicParsing="false" text="Beverages" />
+            <MenuItem mnemonicParsing="false" text="Medicines" />
+            <MenuItem mnemonicParsing="false" text="Books" />
+            <MenuItem mnemonicParsing="false" text="Toileteries" />
+            <MenuItem mnemonicParsing="false" text="Cleaning Supplies" />
+          </items>
+        </Menu>
+            <Menu mnemonicParsing="false">
+               <graphic>
+                  <Separator prefWidth="500.0" visible="false" />
+               </graphic>
+            </Menu>
+        <Menu mnemonicParsing="false" text="My Orders">
+          <items>
+            <MenuItem mnemonicParsing="false" text="sample.Cart.Cart" />
+                  <MenuItem mnemonicParsing="false" text="Previous Orders" />
+                  <MenuItem mnemonicParsing="false" text="Current Orders" />
+          </items>
+        </Menu>
+            <Menu mnemonicParsing="false" text="Account">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Donater" />
+                  <MenuItem mnemonicParsing="false" text="Seller" />
+                  <MenuItem mnemonicParsing="false" text="Buyer" />
+                  <MenuItem mnemonicParsing="false" text="Sign Out" />
+               </items>
+            </Menu>
+      </menus>
+    </MenuBar>
+      <ScrollPane prefHeight="486.0" prefWidth="785.0">
+         <content>
+            <GridPane prefHeight="586.0" prefWidth="759.0" style="-fx-background-color: #31DBCD;">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="209.59999084472656" minHeight="10.0" prefHeight="180.6" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="188.0000030517578" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="318.99999084472654" minHeight="0.0" prefHeight="180.6" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="331.2" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ImageView fitHeight="175.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </GridPane.margin>
+                      <image>
+                          <Image url="@../Images/potato-onion-tomato-500x500.png" />
+                      </image>
+                  </ImageView>
+                  <ImageView fitHeight="177.0" fitWidth="189.0" layoutX="16.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </GridPane.margin>
+                     <image>
+                        <Image url="@../Images/0816Eggs_SC.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="173.0" fitWidth="225.0" layoutX="10.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </GridPane.margin>
+                     <image>
+                        <Image url="@../Images/image192.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="187.0" fitWidth="239.0" layoutX="38.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </GridPane.margin>
+                     <image>
+                        <Image url="@../Images/class-10th-ncert-books-science-maths-social-science-kratika-original-imafpbyjratx23sc.jpeg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="161.0" fitWidth="244.0" layoutX="38.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </GridPane.margin>
+                     <image>
+                        <Image url="@../Images/global_belgium_medicine_blister_packs.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="181.0" fitWidth="219.0" layoutX="10.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </GridPane.margin>
+                     <image>
+                        <Image url="@../Images/clothes.jpg" />
+                     </image>
+                  </ImageView>
+                  <TextArea editable="false" opacity="0.6" prefHeight="82.0" prefWidth="229.0" style="-fx-background-color: #8EDCE7;" text="Onion+Potato+Tomato (500g+500g+1kg) " wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextArea>
+                  <TextArea editable="false" opacity="0.6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #8EDCE7;" text="Eggs&#10;(10)" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextArea>
+                  <TextArea editable="false" opacity="0.6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #8EDCE7;" text="Toor Dal + Rice&#10;(1kg + 5kg)" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextArea>
+                  <TextArea editable="false" opacity="0.6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #8EDCE7;" text="Clothes" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextArea>
+                  <TextArea editable="false" opacity="0.6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #8EDCE7;" text="Fever, Cough and Cold &#10;medicines" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextArea>
+                  <TextArea editable="false" opacity="0.6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #8EDCE7;" text="NCERT Class 10th &#10;bookset" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextArea>
+               </children>
+            </GridPane>
+         </content>
+      </ScrollPane>
+  </children>
+</VBox>

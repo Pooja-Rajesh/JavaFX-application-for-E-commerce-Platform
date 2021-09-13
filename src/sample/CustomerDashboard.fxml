@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorPane" focusTraversable="true" prefHeight="422.0" prefWidth="622.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane fx:id="enquiry_pane2" layoutX="10.0" layoutY="48.0" prefHeight="601.0" prefWidth="903.0" style="-fx-background-color: #8F1D21;" />
+      <AnchorPane layoutY="-6.0" prefHeight="54.0" prefWidth="916.0" style="-fx-background-color: #000000;">
+         <children>
+            <ImageView fitHeight="38.0" fitWidth="36.0" layoutX="355.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/logo.png" />
+               </image>
+            </ImageView>
+            <MenuButton fx:id="account" alignment="CENTER" layoutX="806.0" layoutY="11.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="98.0" style="-fx-background-color: #EEECE1;" text="Account" textAlignment="CENTER">
+              <items>
+                <MenuItem fx:id="re" mnemonicParsing="false" onAction="#switchtor" text="Receiver" />
+                <MenuItem fx:id="bu" mnemonicParsing="false" onAction="#switchtob" text="Buyer" />
+                  <MenuItem fx:id="se" mnemonicParsing="false" onAction="#switchtos" text="Seller" />
+              </items>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </MenuButton>
+            <Label layoutX="423.0" layoutY="5.0" prefHeight="43.0" prefWidth="179.0" text="ESSPRO" textFill="#fce2e2">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+            <Button fx:id="conf" layoutX="734.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleconf" prefHeight="36.0" prefWidth="71.0" style="-fx-background-color: #EEECE1;" text="Confirm" visible="false">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="enquiry_pane" layoutY="44.0" prefHeight="613.0" prefWidth="913.0" style="-fx-background-color: #3A539B;">
+         <children>
+            <TextArea fx:id="enquiryMessage" layoutX="174.0" layoutY="182.0" prefHeight="222.0" prefWidth="323.0">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="56.58" radius="28.5325" width="59.55" />
+               </effect></TextArea>
+            <Text fill="WHITE" layoutX="65.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject">
+               <font>
+                  <Font name="Open Sans Semibold" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow height="50.41" radius="35.082499999999996" spread="0.01" width="91.92" />
+               </effect></Text>
+            <Text fill="WHITE" layoutX="69.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone">
+               <font>
+                  <Font name="Open Sans Semibold" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect></Text>
+            <Text fill="WHITE" layoutX="69.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comments">
+               <font>
+                  <Font name="Open Sans Semibold" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect></Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="account_pane" layoutY="45.0" prefHeight="613.0" prefWidth="913.0" style="-fx-background-color: #1F3A93;">
+         <children>
+            <TextField fx:id="modifyName" layoutX="541.0" layoutY="69.0" prefHeight="25.0" prefWidth="200.0" promptText="New Name" />
+            <Label layoutX="198.0" layoutY="70.0" text="First Name" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans Semibold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="127.0" layoutY="231.0" prefHeight="28.0" prefWidth="179.0" text="Secondary Email" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans Semibold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="130.0" layoutY="272.0" text="Address" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans Semibold" size="19.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="modifyAddress" layoutX="542.0" layoutY="192.0" prefHeight="134.0" prefWidth="200.0" promptText="New Address" />
+            <Label layoutX="127.0" layoutY="349.0" text="Password" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans Semibold" size="19.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="oldPassword" layoutX="337.0" layoutY="349.0" prefHeight="25.0" prefWidth="203.0" promptText="Enter Your old password" />
+
+            <Label fx:id="modifyNameLabel" layoutX="358.0" layoutY="70.0" text="YourName" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans Semibold" size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="modifyEmail" disable="true" layoutX="541.0" layoutY="118.0" prefHeight="25.0" prefWidth="200.0" promptText="New Email" />
+            <Label layoutX="198.0" layoutY="28.0" text="Customer ID : " textFill="WHITE">
+               <font>
+                  <Font name="Open Sans Semibold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="modifyAddressLabel" layoutX="336.0" layoutY="274.0" text="YourAdd" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans Semibold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="customerIDLabel" layoutX="338.0" layoutY="28.0" text="1002949" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans Semibold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="227.0" layoutY="112.0" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans Semibold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="127.0" layoutY="193.0" prefHeight="28.0" prefWidth="179.0" text="Primary Email" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans Semibold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="modifyEmailLabel" layoutX="291.0" layoutY="192.0" text="YourEmail" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans Semibold" size="19.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="newPassword" layoutX="338.0" layoutY="412.0" prefHeight="25.0" prefWidth="203.0" promptText="Enter new password" />
+            <Label layoutX="127.0" layoutY="411.0" text="New Password" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans Semibold" size="19.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@productPics/icons/name.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="history_pane" layoutY="45.0" prefHeight="614.0" prefWidth="916.0" style="-fx-background-color: #4ECDC4;">
+         <children>
+            <TableView fx:id="purchaseHistory" layoutX="35.0" layoutY="115.0" prefHeight="364.0" prefWidth="386.0">
+              <columns>
+                <TableColumn fx:id="purchaseIdCol" prefWidth="99.0" text="Purchase ID" />
+                  <TableColumn fx:id="purchaseDayCol" prefWidth="126.0" text="Date" />
+                  <TableColumn fx:id="purchaseAmountCol" prefWidth="159.0" text="Amount" />
+              </columns>
+            </TableView>
+            <ImageView fitHeight="386.0" fitWidth="386.0" layoutX="503.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@productPics/icons/270007.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="store_pane" layoutY="45.0" prefHeight="600.0" prefWidth="913.0" style="-fx-background-color: #F79646;">
+         <children>
+            <Pane layoutY="1.0" prefHeight="646.0" prefWidth="278.0" style="-fx-background-color: #000000;">
+               <children>
+                  <ImageView fx:id="mainImg" fitHeight="152.0" fitWidth="170.0" layoutX="44.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" styleClass="thumb">
+                     <image>
+                        <Image url="@../../../../WhatsApp%20Image%202021-08-13%20at%204.56.15%20PM.jpeg" />
+                     </image>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </ImageView>
+                  <Label layoutX="33.0" layoutY="213.0" text="TITLE" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="28.0" layoutY="286.0" text="DESCRIPTION" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="26.0" layoutY="439.0" text="CATEGORY" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="28.0" layoutY="379.0" text="QUANTITY" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="30.0" layoutY="499.0" text="PICKUP LOCATION" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="Title" layoutX="28.0" layoutY="240.0" prefHeight="25.0" prefWidth="203.0" style="-fx-background-color: #EEECE1;" />
+                  <TextArea fx:id="Desc" layoutX="28.0" layoutY="315.0" prefHeight="54.0" prefWidth="203.0" style="-fx-background-color: #EEECE1;" />
+                  <TextField fx:id="qty" layoutX="28.0" layoutY="407.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #EEECE1;" />
+                  <TextArea fx:id="pickup" layoutX="28.0" layoutY="520.0" prefHeight="47.0" prefWidth="203.0" style="-fx-background-color: #EEECE1;" />
+                  <MenuButton fx:id="category" layoutX="31.0" layoutY="460.0" mnemonicParsing="false" style="-fx-background-color: #EEECE1;" text="Choose">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Food" />
+                      <MenuItem mnemonicParsing="false" text="Clothes" />
+                        <MenuItem mnemonicParsing="false" text="Beverages" />
+                        <MenuItem mnemonicParsing="false" text="Medicines" />
+                        <MenuItem mnemonicParsing="false" text="Books" />
+                        <MenuItem mnemonicParsing="false" text="Toiletries" />
+                        <MenuItem mnemonicParsing="false" text="Cleaning Supplies" />
+                    </items>
+                  </MenuButton>
+                  <Button fx:id="add_prod1" layoutX="54.0" layoutY="581.0" mnemonicParsing="false" onAction="#add_ess" prefHeight="43.0" prefWidth="131.0" style="-fx-background-color: #F79646;" text="Add Product" />
+                  <Button fx:id="browse" layoutX="91.0" layoutY="188.0" mnemonicParsing="false" onAction="#setimage" style="-fx-background-color: #EEECE1;" text="Browse">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <TextArea fx:id="textArea" layoutX="28.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" visible="false" />
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+            <AnchorPane layoutX="290.0" layoutY="14.0" prefHeight="583.0" prefWidth="603.0">
+               <children>
+                  <Label layoutX="33.0" text="Toor Dal">
+                     <font>
+                        <Font name="Open Sans Semibold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="img1" fitHeight="188.0" fitWidth="160.0" layoutX="1.0" layoutY="21.0" onMouseClicked="#handleImg1" onMousePressed="#handleImg1" pickOnBounds="true" preserveRatio="true" styleClass="thumb">
+                     <image>
+                        <Image url="@Images/41gge5q5zJL.jpg" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="2" fitHeight="188.0" fitWidth="160.0" layoutX="408.0" layoutY="21.0" onMousePressed="#handleImg3" pickOnBounds="true" preserveRatio="true" styleClass="thumb">
+                     <image>
+                        <Image url="@Images/clothes.jpg" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="183.0" fitWidth="160.0" layoutX="203.0" layoutY="21.0" onMousePressed="#handleImg2" pickOnBounds="true" preserveRatio="true" styleClass="thumb">
+                     <image>
+                        <Image url="@Images/0816Eggs_SC.jpg" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="188.0" fitWidth="160.0" layoutX="397.0" layoutY="225.0" onMouseReleased="#handleImg5" pickOnBounds="true" preserveRatio="true" styleClass="thumb">
+                     <image>
+                        <Image url="@Images/Screenshot (1289).png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="188.0" fitWidth="160.0" layoutX="5.0" layoutY="423.0" onMousePressed="#handleImg7" pickOnBounds="true" preserveRatio="true" styleClass="thumb">
+                     <image>
+                        <Image url="@Images/Screenshot (1300).png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="188.0" fitWidth="160.0" layoutX="204.0" layoutY="229.0" onMousePressed="#handleImg6" pickOnBounds="true" preserveRatio="true" styleClass="thumb">
+                     <image>
+                        <Image url="@Images/Screenshot (1285).png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="160.0" fitWidth="160.0" layoutY="225.0" onMouseReleased="#handleImg4" pickOnBounds="true" preserveRatio="true" styleClass="thumb">
+                     <image>
+                        <Image url="@Images/Screenshot (1281).png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="142.0" fitWidth="179.0" layoutX="416.0" layoutY="423.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/potato-onion-tomato-500x500.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="260.0" text="Egg Carton">
+                     <font>
+                        <Font name="Open Sans Semibold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="442.0" layoutY="2.0" text="Sweater">
+                     <font>
+                        <Font name="Open Sans Semibold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="46.0" layoutY="198.0" text="Millet Cereal">
+                     <font>
+                        <Font name="Open Sans Semibold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="208.0" fitWidth="160.0" layoutX="216.0" layoutY="423.0" onMousePressed="#handleImg8" pickOnBounds="true" preserveRatio="true" styleClass="thumb">
+                     <image>
+                        <Image url="@Images/Screenshot (1299).png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label layoutX="238.0" layoutY="198.0" text="Coffe Powder">
+                     <font>
+                        <Font name="Open Sans Semibold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="438.0" layoutY="198.0" text="Teething Sticks">
+                     <font>
+                        <Font name="Open Sans Semibold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="28.0" layoutY="403.0" text="Alphonso Mango">
+                     <font>
+                        <Font name="Open Sans Semibold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="253.0" layoutY="403.0" text="Sunpure oil">
+                     <font>
+                        <Font name="Open Sans Semibold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="441.0" layoutY="403.0" text="Vegetable Combo">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
